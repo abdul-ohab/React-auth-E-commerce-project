@@ -1,0 +1,17 @@
+
+.shop-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 300px;
+    height: 510px;
+    gap: 45px;
+}
+.product-summery{
+    background-color: rgba(255, 153, 0, 0.3);
+    position: sticky;
+    top: 0;
+}

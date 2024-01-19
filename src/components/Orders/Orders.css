@@ -1,0 +1,13 @@
+.review-container{
+    width: 570px;
+    margin: 50px auto;
+}
+.selected{
+    color: rgb(97, 48, 143);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+}

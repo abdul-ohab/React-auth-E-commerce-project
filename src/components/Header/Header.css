@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    background-color: #1C2B35;
+}
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    height: 80px;
+}
+.nav-menu{
+    margin: 15px;
+}
+.nav-menu a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #ffffff;
+    margin: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav-menu a:hover{
+    color: #FF9900;
+}
