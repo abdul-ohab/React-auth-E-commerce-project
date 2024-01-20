@@ -1,4 +1,3 @@
-
 import Shop from './components/Shop/Shop'
 
 function App() {
@@ -12,4 +11,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

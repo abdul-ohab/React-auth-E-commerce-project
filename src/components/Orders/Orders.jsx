@@ -40,9 +40,9 @@ const Orders = () => {
 
             <div className="product-summery">
                 <Cart cart={cart} clearCart={clearCart}>
-                    <Link to='/checkout' className='link'>
+                    <Link to='/shipping' className='link'>
                         <button className='common-btn'>
-                            <span>Checkout</span><FontAwesomeIcon icon={faMoneyBill}></FontAwesomeIcon>
+                            <span>Proceed Shipping</span><FontAwesomeIcon icon={faMoneyBill}></FontAwesomeIcon>
                         </button>
                     </Link>
                 </Cart>

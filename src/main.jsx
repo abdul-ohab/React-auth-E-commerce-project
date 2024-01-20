@@ -1,9 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import {createBrowserRouter,RouterProvider} from "react-router-dom";
 import Shop from './components/Shop/Shop.jsx';
 import Layout from './Layout/Layout.jsx';
 import Orders from './components/Orders/Orders.jsx';
@@ -11,6 +8,10 @@ import Inventory from './components/Inventory/Inventory.jsx';
 import Login from './components/Login/Login.jsx';
 import cartProducts from './CartProducts/CartProducts.js';
 import Checkout from './components/Checkout/Checkout.jsx';
+import SignUp from './components/SignUp/SignUp.jsx';
+import UserContext from './contexts/UserContext.jsx';
+import Shipping from './components/Shipping/Shipping.jsx';
+import PrivateRouter from './router/PrivateRouter.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,11 +33,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/inventory',
-        element: <Inventory></Inventory>
+        element: <PrivateRouter><Inventory></Inventory></PrivateRouter>
+      },
+      {
+        path: '/shipping',
+        element: <PrivateRouter><Shipping></Shipping></PrivateRouter>
       },
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path: '/signup',
+        element: <SignUp></SignUp>
       },
       {
         path: '/checkout',
@@ -52,6 +61,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <UserContext>
+      <RouterProvider router={router}></RouterProvider>
+    </UserContext>
   </React.StrictMode>,
 )
